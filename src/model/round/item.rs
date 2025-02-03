@@ -2,7 +2,7 @@ pub enum Item {
     Ore(Ore),
     Herb(Herb),
     Gem(Gem),
-    Gold,
+    Gold(u32),
 }
 
 pub enum Ore {

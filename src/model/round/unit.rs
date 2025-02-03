@@ -7,6 +7,9 @@ pub enum UnitError {
     UnitNotAlive,
 }
 
+///
+/// One of four protection tiers a character can have for defense or resistance.
+///
 #[derive(Debug, Copy, Clone, PartialEq)]
 pub enum Protection {
     Light,
@@ -27,6 +30,9 @@ impl Protection {
 }
 
 
+///
+/// One of five stats a unit can have (excluding Armor and Resistance as they follow different rules
+///
 pub enum Stat {
     Health,
     Stamina,
@@ -47,6 +53,9 @@ impl fmt::Display for Protection {
     }
 }
 
+///
+/// Represents a unit on the game board. Controlled by a player. Can move, attack, and use abilities.
+///
 #[derive(Debug)]
 pub struct Unit {
     name: String,

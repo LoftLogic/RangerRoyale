@@ -1,5 +1,5 @@
 pub mod game;
-mod player;
+pub(crate) mod player;
 pub mod round;
 mod playerselector;
 mod levelselector;

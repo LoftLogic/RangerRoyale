@@ -1,6 +1,11 @@
 use crate::model::round::cell::Cell;
 use std::collections::HashSet;
+use crate::model::player;
+use crate::model::player::Player;
 
+///
+/// Different special level settings (default levels will have none)
+///
 #[derive(Debug, Hash, PartialEq, Eq)]
 pub enum Rule {
     LowIntel,
@@ -17,16 +22,21 @@ impl Rule {
     }
 }
 
+
+///
+/// Represents a particular level a player can play on, with associated map and rules
+///
 pub struct Level {
     name: String,
     grid: Vec<Vec<Cell>>,
     rules: HashSet<Rule>,
-    in_progress: bool
+    in_progress: bool,
+    enemy: Player,
 }
 
 impl Level {
-    pub fn new(name: &str, grid: Vec<Vec<Cell>>, rules: HashSet<Rule>) -> Level {
-        Level { name: name.to_string(), grid, rules, in_progress: false }
+    pub fn new(name: &str, grid: Vec<Vec<Cell>>, rules: HashSet<Rule>, enemy: Player) -> Level {
+        Level { name: name.to_string(), grid, rules, in_progress: false, enemy }
     }
 
     pub fn start(&mut self) {

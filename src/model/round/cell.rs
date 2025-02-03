@@ -6,6 +6,10 @@ pub enum CellError {
     CellTaken,
     CellNotOccupied,
 }
+
+///
+/// One of the biomes a cell can have (the environment its in)
+///
 pub enum Biome {
     Plain,
     Forest,
@@ -63,6 +67,9 @@ impl fmt::Display for Biome {
     }
 }
 
+///
+/// A spot on the map. Has a biome and can have a unit or an item (Never both).
+///
 pub struct Cell {
     biome: Biome,
     unit: Option<Unit>,

@@ -18,6 +18,7 @@ pub enum GamePhase {
     EndLevel,
 }
 
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Screen {
     PlayerSelection(),
@@ -25,9 +26,8 @@ pub enum Screen {
 }
 
 
-/**
- * Represents the game state, only can be one instantiated at a time.
- */
+///
+/// Represents the game state, only can be one instantiated at a time.
 pub struct Game {
     levels: Vec<Level>,
     selected_lvl_idx: Option<usize>,
