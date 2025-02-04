@@ -1,7 +1,7 @@
 use piston_window::{rectangle,Context, G2d};
 use piston_window::types::Color;
 use crate::model::game::Game;
-use crate::view::display;
+use crate::view::display::Display;
 use crate::view::draw::*;
 use crate::view::gamedisplay::GameDisplay;
 use crate::view::interfacedisplay::InterfaceDisplay;
@@ -17,9 +17,9 @@ impl WindowDisplay {
     }
 }
 
-impl display for WindowDisplay {
+impl Display for WindowDisplay {
     fn draw(&self, game: Game, color: Color, con: &Context, g: &mut G2d) {
-        self.game_display.display();
+        self.game_display.draw(game, color, con, g);
     }
 }
 

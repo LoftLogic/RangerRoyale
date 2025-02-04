@@ -25,4 +25,8 @@ impl Player {
     pub fn name(&self) -> &str {
         &self.name
     }
+
+    pub fn level_up(&mut self) {
+        self.highest_lvl = self.highest_lvl + 1;
+    }
 }

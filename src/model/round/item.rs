@@ -1,3 +1,4 @@
+#[derive(Debug)]
 pub enum Item {
     Ore(Ore),
     Herb(Herb),
@@ -5,18 +6,21 @@ pub enum Item {
     Gold(u32),
 }
 
+#[derive(Debug)]
 pub enum Ore {
     IronOre,
     SilverOre,
     PlatinumOre,
 }
 
+#[derive(Debug)]
 pub enum Herb {
     RestorationHerb,
     EnchantedHerb,
     PowerHerb,
 }
 
+#[derive(Debug)]
 pub enum Gem {
     Ruby,
     Sapphire,
