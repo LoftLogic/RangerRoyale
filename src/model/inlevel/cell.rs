@@ -1,6 +1,6 @@
 use std::fmt;
-use crate::model::round::item::Item;
-use crate::model::round::unit::{Protection, Unit};
+use crate::model::inlevel::item::Item;
+use crate::model::inlevel::unit::{Protection, Unit};
 
 pub enum CellError {
     CellTaken,

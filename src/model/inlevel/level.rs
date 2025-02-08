@@ -1,4 +1,4 @@
-use crate::model::round::cell::Cell;
+use crate::model::inlevel::cell::Cell;
 use std::collections::HashSet;
 use crate::model::player;
 use crate::model::player::Player;
@@ -63,5 +63,9 @@ impl Level {
 
     pub fn get_rules(&self) -> &HashSet<Rule> {
         &self.rules
+    }
+
+    pub fn get_grid(&self) -> &Vec<Vec<Cell>> {
+        &self.grid
     }
 }

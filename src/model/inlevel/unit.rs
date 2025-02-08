@@ -1,7 +1,7 @@
 use std::fmt;
 use std::collections::HashSet;
 
-use crate::model::round::attack::DamageType;
+use crate::model::inlevel::attack::DamageType;
 
 #[derive(Debug)]
 pub enum UnitError {
@@ -79,11 +79,11 @@ pub struct Unit {
 impl Unit {
 
     pub fn new(name: String, max_health: u32, health: u32, max_stamina: u32, stamina: u32, strength: u32,
-       defense: u32, movement: u32, agility: u32, armor: Protection, resistance: Protection) -> Result<Unit, UnitError> {
-        if (health > 100 || stamina > MAX_STAT || strength > MAX_STAT || defense > MAX_STAT || movement > MAX_STAT) {
+       defense: u32, speed: u32, agility: u32, armor: Protection, resistance: Protection) -> Result<Unit, UnitError> {
+        if (health > 100 || stamina > MAX_STAT || strength > MAX_STAT || defense > MAX_STAT || speed > MAX_STAT) {
             return Err(UnitError::StatTooHigh);
         }
-        Ok(Unit { name, max_health, health, max_stamina, stamina, strength, defense, speed: movement, agility, armor, resistance })
+        Ok(Unit { name, max_health, health, max_stamina, stamina, strength, defense, speed, agility, armor, resistance })
     }
 
     // GETTER METHODS:

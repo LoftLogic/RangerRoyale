@@ -1,5 +1,5 @@
 use piston_window::{clear, PistonWindow, WindowSettings};
-use crate::model::round::cell::Biome;
+use crate::model::inlevel::cell::Biome;
 
 extern crate piston_window;
 mod model;
@@ -8,8 +8,8 @@ mod view;
 use crate::model::game::Game;
 use crate::view::windowdisplay::{to_coord, to_coord_u32};
 use crate::model::game;
-use crate::model::round::level::Level;
-use crate::model::round::cell::Cell;
+use crate::model::inlevel::level::Level;
+use crate::model::inlevel::cell::Cell;
 use crate::model::player::Player;
 use crate::model::player::Difficulty;
 

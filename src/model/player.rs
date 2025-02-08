@@ -1,6 +1,7 @@
 ///
 /// Players associated difficulty (Associated implementation not designed yet)
 ///
+#[derive(Debug, PartialEq, Eq, Hash)]
 pub enum Difficulty {
     Easy,
     Medium,
@@ -11,6 +12,7 @@ pub enum Difficulty {
 /// The player in the game, and their progression and settings. There can be more than one player
 /// but only two players can be playing at once.
 ///
+#[derive(Debug, PartialEq, Eq, Hash)]
 pub struct Player {
     name: String,
     difficulty: Difficulty,
